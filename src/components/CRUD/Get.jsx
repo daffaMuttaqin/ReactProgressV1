@@ -3,8 +3,8 @@ import axios from "axios";
 import { useState } from "react";
 import { useEffect } from "react";
 
-function User() {
-  const [data, setData] = useState("");
+function Get() {
+  const [data, setData] = useState([]);
   //   const axios = require("axios");
 
   //   axios.get("http://localhost:3000/").then((res) => setData(res.data));
@@ -22,9 +22,21 @@ function User() {
 
   return (
     <div>
-      <div>{data.id}</div>
+      <div>
+        {/* Mapping Data */}
+        {data.map((result, index) => {
+          return (
+            <div key={index}>
+              <div>
+                {result.name} {result.category}
+                {result.price}
+              </div>
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 }
 
-export default User;
+export default Get;

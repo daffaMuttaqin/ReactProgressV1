@@ -15,13 +15,19 @@ function Navbar() {
             </li>
             <li>
               <details>
-                <summary>Profil</summary>
+                <summary>CRUD</summary>
                 <ul className="bg-base-100 rounded-t-none p-2">
                   <li>
-                    <Link to={"/user"}>User</Link>
+                    <Link to={"/get"}>GET</Link>
                   </li>
                   <li>
-                    <a>Admin</a>
+                    <Link to={"/post"}>POST</Link>
+                  </li>
+                  <li>
+                    <Link to={"/put"}>PUT</Link>
+                  </li>
+                  <li>
+                    <Link to={"/delete"}>DELETE</Link>
                   </li>
                 </ul>
               </details>
